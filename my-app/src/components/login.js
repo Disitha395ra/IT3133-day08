@@ -6,14 +6,9 @@ import React from "react";
 export default function login(){
     const navigate = useNavigate();
 
-    const users=({
-        username:'admin',
-        password:'123'
-    });
-
-    const [error, seterror]=useState('')
-    const [user, setuser]=useState('')
-    
+    let username="Admin";
+    let password="123"
+    const[error, seterror]=useState('')
     const authenticate=(e)=>{
         e.preventDefault();
         if(!username || !password){
@@ -26,8 +21,9 @@ export default function login(){
             return
         }
 
-        if(users.username === e.username || users.password === e.password){
-            navigate('/dashboard')
+        if(username === e.username || password === e.password){
+            const navigate = useNavigate();
+            navigate('/dashboard');
         }
     }
 
@@ -39,15 +35,16 @@ export default function login(){
                 <input type="text"
                 name="username"
                 placeholder="Enter username"
-                value={users.username}/>
+                value={username}/>
 
                 <input type="password"
                 name="password"
                 placeholder="Enter password"
-                value={users.password}/>
+                value={password}/>
 
 
                 <button onClick={authenticate}>Click Me</button>
+                <span>{error}</span>
             </form>
         </div>
     )
