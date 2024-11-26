@@ -1,20 +1,16 @@
-# IT3133-day07
+# IT3133 Day 07: Login and Dashboard Functionality
 
-### initalize login and dashboard page in components folder 
+## Overview
+This project demonstrates a simple login and dashboard functionality using React. The application includes user authentication with basic validations, error handling, and navigation between pages.
 
-```export default function login(){
-    return(
-        <div>
-            <h1>Login Here</h1>
-        </div>
-    )
-}```
+---
 
-```export default function dashboard(){
-    return(
-        <div>
-            <h1>Welcome Admin</h1>
-        </div>
-    )
-}```
+## Features
+- **Login Page:** Allows users to enter a username and password.
+- **Dashboard Page:** Displays a welcome message for authenticated users.
+- **Validation:**
+  - Fields cannot be empty.
+  - Password must be at least 8 characters long.
+  - Authentication is restricted to predefined credentials.
 
+---
